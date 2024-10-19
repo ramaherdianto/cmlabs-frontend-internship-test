@@ -14,7 +14,6 @@ export const CategoriesPage = () => {
                     'https://www.themealdb.com/api/json/v1/1/categories.php'
                 );
 
-                console.log(response.data.categories);
                 setCategories(response.data.categories);
             } catch (error) {
                 console.log('Error fetching categories: ', error);
@@ -24,23 +23,25 @@ export const CategoriesPage = () => {
         getCategories();
     }, []);
 
+    useEffect(() => {
+        document.title = 'Categories';
+    }, []);
+
     return (
-        <>
-            <MainLayout>
-                <section className='container mx-auto -mt-[150px] px-4 py-12'>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-                        {categories.map((category) => (
-                            <Link
-                                key={category.idCategory}
-                                href={`http://www.themealdb.com/api/json/v1/1/filter.php?c=${category.name}`}
-                                className='group'
-                            >
-                                <CategoryList category={category} />
-                            </Link>
-                        ))}
-                    </div>
-                </section>
-            </MainLayout>
-        </>
+        <MainLayout breadcrumb={false}>
+            <section className='container mx-auto -mt-[180px] px-4 py-12'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+                    {categories.map((category) => (
+                        <Link
+                            key={category.idCategory}
+                            to={`/category/${category.strCategory}`}
+                            className='group'
+                        >
+                            <CategoryList category={category} />
+                        </Link>
+                    ))}
+                </div>
+            </section>
+        </MainLayout>
     );
 };
