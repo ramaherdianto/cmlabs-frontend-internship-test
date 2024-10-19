@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HomePage } from './pages/home';
+import { CategoriesPage } from './Pages/categories';
 
 function App() {
     return (
         <Router>
             <Routes>
-                <Route path='/' element={<HomePage />} />
+                <Route path='/' element={<CategoriesPage />} />
             </Routes>
         </Router>
     );
