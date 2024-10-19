@@ -2,11 +2,11 @@ import React from 'react';
 import Navbar from './Navbar';
 import HeroSection from './HeroSection';
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ children, heading, breadcrumb }) => {
     return (
         <>
             <Navbar />
-            <HeroSection />
+            <HeroSection heading={heading} breadcrumb={breadcrumb} />
             {children}
         </>
     );
