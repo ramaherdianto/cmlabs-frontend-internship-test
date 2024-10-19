@@ -5,7 +5,7 @@ const HeroSection = () => {
     return (
         <section className='relative h-[500px] sm:h-[600px] lg:h-[700px] w-full flex flex-col justify-center items-center text-center'>
             <div
-                className='absolute inset-0 bg-cover bg-bottom bg-no-repeat'
+                className='absolute inset-0 bg-cover bg-center bg-no-repeat'
                 style={{ backgroundImage: `url(${heroImage})` }}
             ></div>
             <div className='absolute inset-0 bg-black/50'></div>
