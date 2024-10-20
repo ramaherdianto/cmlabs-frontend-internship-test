@@ -6,6 +6,7 @@ const CategoryList = ({ category }) => {
             <img
                 src={category.strCategoryThumb}
                 alt={`${category.strCategory} category`}
+                loading='lazy'
                 className='transition-opacity w-3/4 md:w-full duration-300 group-hover:opacity-75'
             />
             <h3 className='text-xl text-slate-800 font-semibold text-center'>

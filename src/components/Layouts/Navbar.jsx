@@ -46,7 +46,7 @@ const Navbar = () => {
                             <button
                                 onClick={toggleMenu}
                                 type='button'
-                                className='cursor-pointer rounded-[50%] p-2'
+                                className='cursor-pointer rounded-[50%]'
                                 aria-controls='mobile-menu'
                                 aria-expanded='false'
                             >
@@ -79,7 +79,7 @@ const Navbar = () => {
                         <button
                             onClick={toggleMenu}
                             type='button'
-                            className='p-2 absolute cursor-pointer right-4 top-4'
+                            className='absolute cursor-pointer right-4 top-4'
                             aria-controls='mobile-menu'
                             aria-expanded='false'
                         >

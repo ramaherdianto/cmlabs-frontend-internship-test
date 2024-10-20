@@ -7,7 +7,8 @@ const CategoryDetailList = ({ meal }) => {
                 <img
                     src={meal.strMealThumb}
                     alt={`${meal.strMeal} category`}
-                    className='w-full aspect-video object-cover object-center transition-all duration-300 rounded-t-lg group-hover:opacity-75 group-hover:scale-125'
+                    loading='lazy'
+                    className='w-full aspect-video object-cover object-center transition-all duration-500 rounded-t-lg group-hover:opacity-75 group-hover:scale-125'
                 />
 
                 <div className='absolute inset-0 bg-black/30'></div>
