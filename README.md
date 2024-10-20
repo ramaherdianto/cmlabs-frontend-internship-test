@@ -14,7 +14,7 @@ React + Vite, React-Router-Dom, Axios, TailwindCSS
 Clone the project
 
 ```bash
-  git clone [https://link-to-project](https://github.com/ramaherdianto/cmlabs-frontend-internship-test.git)
+  git clone https://github.com/ramaherdianto/cmlabs-frontend-internship-test.git
 ```
 
 Go to the project directory
