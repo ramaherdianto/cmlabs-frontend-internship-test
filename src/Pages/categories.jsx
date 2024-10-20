@@ -7,6 +7,13 @@ import CategoryList from '../components/Fragments/CategoryList';
 export const CategoriesPage = () => {
     const [categories, setCategories] = useState([]);
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     useEffect(() => {
         const getCategories = async () => {
             try {
@@ -31,11 +38,12 @@ export const CategoriesPage = () => {
         <MainLayout breadcrumb={false}>
             <section className='container mx-auto -mt-[180px] px-4 py-12'>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-                    {categories.map((category) => (
+                    {categories?.map((category) => (
                         <Link
                             key={category.idCategory}
                             to={`/category/${category.strCategory}`}
                             className='group'
+                            onClick={scrollToTop}
                         >
                             <CategoryList category={category} />
                         </Link>

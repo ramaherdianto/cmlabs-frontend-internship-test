@@ -2,7 +2,7 @@ import React from 'react';
 import heroImage from '../../assets/heroImage.webp';
 import { Link } from 'react-router-dom';
 
-const HeroSection = ({ heading, breadcrumb }) => {
+const HeroSection = ({ heading, breadcrumb, breadcrumbTitle }) => {
     return (
         <section className='relative h-[500px] sm:h-[600px] lg:h-[750px] w-full flex flex-col justify-center items-center text-center'>
             <div
@@ -21,7 +21,7 @@ const HeroSection = ({ heading, breadcrumb }) => {
                             <li className='inline-flex items-center'>
                                 <Link
                                     to='/'
-                                    className='inline-flex items-center text-sm font-medium text-white hover:text-slate-400'
+                                    className='inline-flex items-center text-sm font-medium text-white hover:text-slate-300'
                                 >
                                     <svg
                                         className='w-3 h-3 me-2.5'
@@ -38,7 +38,7 @@ const HeroSection = ({ heading, breadcrumb }) => {
                             <li>
                                 <div className='flex items-center'>
                                     <svg
-                                        className='rtl:rotate-180 w-3 h-3 text-gray-400 mx-1'
+                                        className='rtl:rotate-180 w-3 h-3 text-gray-300 mx-1'
                                         aria-hidden='true'
                                         xmlns='http://www.w3.org/2000/svg'
                                         fill='none'
@@ -56,14 +56,14 @@ const HeroSection = ({ heading, breadcrumb }) => {
                                         href='#'
                                         className='ms-1 text-sm font-medium text-white md:ms-2'
                                     >
-                                        Category
+                                        {breadcrumbTitle}
                                     </p>
                                 </div>
                             </li>
                             <li aria-current='page'>
                                 <div className='flex items-center'>
                                     <svg
-                                        className='rtl:rotate-180 w-3 h-3 text-gray-400 mx-1'
+                                        className='rtl:rotate-180 w-3 h-3 text-gray-300 mx-1'
                                         aria-hidden='true'
                                         xmlns='http://www.w3.org/2000/svg'
                                         fill='none'
@@ -77,7 +77,7 @@ const HeroSection = ({ heading, breadcrumb }) => {
                                             d='m1 9 4-4-4-4'
                                         />
                                     </svg>
-                                    <span className='ms-1 text-sm font-medium text-slate-400 md:ms-2'>
+                                    <span className='ms-1 text-sm font-medium text-gray-300 md:ms-2'>
                                         {heading}
                                     </span>
                                 </div>
