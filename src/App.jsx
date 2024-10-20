@@ -1,8 +1,17 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { CategoriesPage } from './Pages/categories';
+import CategoryDetailPage from './Pages/categoryDetail';
+import MealDetailPage from './Pages/mealDetail';
+
 function App() {
     return (
-        <>
-            <h1 className='text-2xl text-blue-500 font-bold underline'>Vite + React</h1>
-        </>
+        <Router>
+            <Routes>
+                <Route path='/' element={<CategoriesPage />} />
+                <Route path='/category/:categoryName' element={<CategoryDetailPage />} />
+                <Route path='/meals/:mealId' element={<MealDetailPage />} />
+            </Routes>
+        </Router>
     );
 }
 
