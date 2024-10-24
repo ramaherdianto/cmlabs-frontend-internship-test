@@ -19,7 +19,7 @@ const CategoryDetailPage = () => {
         const getMeals = async () => {
             try {
                 const response = await Axios.get(
-                    `http://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`
+                    `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`
                 );
                 setMeals(response.data.meals);
             } catch (error) {
