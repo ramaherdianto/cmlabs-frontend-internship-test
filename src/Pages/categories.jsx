@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import MainLayout from '../components/layouts/MainLayout';
+import MainLayout from '../components/Layouts/MainLayout';
 import { useEffect, useState } from 'react';
 import Axios from 'axios';
 import CategoryList from '../components/Fragments/CategoryList';
